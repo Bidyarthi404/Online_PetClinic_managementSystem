@@ -1,0 +1,627 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    @*<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">*@
+
+    @*Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+    @*<link href="~/Content/Dashboard Template/css/font-awesome.min.css" rel="stylesheet" />*@
+    <link href="~/Content/Front Template/css/_about.css" rel="stylesheet" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>@ViewBag.Title</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/Front Template/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Content/Front Template/css/themify-icons.css">
+    <link rel="stylesheet" href="~/Content/Front Template/css/flaticon.css">
+    <link rel="stylesheet" href="~/Content/Front Template/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="~/Content/Front Template/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/Front Template/vendors/animate-css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="~/Content/Front Template/css/style.css">
+    <link rel="stylesheet" href="~/Content/Front Template/css/responsive.css">
+
+</head>
+<body>
+    <header class="header_area">
+        <div class="top_menu row m0">
+            <div class="container">
+                <div class="float-left">
+                    <a class="dn_btn" href="mailto:bidyarthipaul01@gmail.com"><i class="ti-email"></i>bidyarthipaul01@gmail.com</a>
+                    
+                </div>
+                <div class="float-right">
+                    <ul class="list header_social">
+                        <li><a href="https://www.facebook.com/"><i class="ti-facebook"></i></a></li>
+                        <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                        <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about-area">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#services">Health Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#doctors">Doctors</a></li>
+                            <li class="nav-item"> @Html.ActionLink("Pharmacy", "Pharmacy", "Home", new { @class = "nav-link", }) </li>
+                            <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                            <li class="nav-item"> @Html.ActionLink("Login", "login", "Home", new { @class = "nav-link", }) </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container body-content">
+        <!--================Header Menu Area =================-->
+        <!--================Home Banner Area =================-->
+
+        <section class="banner-area d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-lg-8 col-xl-7">
+                        <h1>
+                            WAGGING TAIL<br>
+                            Your Dog Clinic,<br>
+                            Tailored for Happiness!
+                        </h1>
+                        <p>
+                            Welcome to our premier dog clinic, where we're dedicated to providing unparalleled love and care to every furry friend that walks through our doors. 
+                            We understand that your dogs are not just pets, but cherished members of your family, and we treat them as such. Our mission is to ensure their health, 
+                            happiness, and well-being, tailoring our services to meet their individual needs.
+                        </p>
+                        @Html.ActionLink("Make an Appointment", "Login", "Home", new { @class = "main_btn" })
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--================End Home Banner Area =================-->
+        <!--================ Feature section start =================-->
+        <section class="feature-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card card-feature text-center text-lg-left">
+
+                            <h3 class="card-feature__title">
+                                <span class="card-feature__icon">
+                                    <i class="ti-layers"></i>
+                                </span>Primary Care
+                            </h3>
+                            <p class="card-feature__subtitle">Your First Line of Defense for Optimal Health: Primary Care You Can Rely On. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-feature text-center text-lg-left">
+
+                            <h3 class="card-feature__title">
+                                <span class="card-feature__icon">
+                                    <i class="ti-heart-broken"></i>
+                                </span>Emergency Cases
+                            </h3>
+                            <p class="card-feature__subtitle">When Seconds Count, Our Emergency Care Team is Here to Save Lives. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-feature text-center text-lg-left">
+
+                            <h3 class="card-feature__title">
+                                <span class="card-feature__icon">
+                                    <i class="ti-headphone-alt"></i>
+                                </span>Online Appointment
+                            </h3>
+                            <p class="card-feature__subtitle">Book Your Pet's Care with Ease: Schedule an Online Appointment in Just a Click! </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================ Feature section end =================-->
+        <!--================ Service section start =================-->
+        <section id="services">
+            <div class="service-area area-padding-top">
+                <div class="container">
+                    <div class="area-heading row">
+                        <div class="col-md-5 col-xl-4">
+                            <h3>
+                                Awesome<br>
+                                Health Service
+                            </h3>
+                        </div>
+                        <div class="col-md-7 col-xl-8">
+                            <p>Experience the Awesome Difference in Pet Care: Our Health Services Go Above and Beyond to Keep Your Beloved Companion Happy and Healthy!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card-service text-center text-lg-left mb-4 mb-lg-0">
+                                <span class="card-service__icon">
+                                    <i class="flaticon-brain"></i>
+                                </span>
+                                <h3 class="card-service__title">Surgery</h3>
+                                <p class="card-service__subtitle">Both routine and advanced surgical procedures, including spaying, neutering, and other necessary operations.</p>
+                                <a class="card-service__link" href="#">Learn More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card-service text-center text-lg-left mb-4 mb-lg-0">
+                                <span class="card-service__icon">
+                                    <i class="flaticon-tooth"></i>
+                                </span>
+                                <h3 class="card-service__title">Dental Care</h3>
+                                <p class="card-service__subtitle">Dental examinations, cleanings, and treatments for maintaining healthy teeth and gums.</p>
+                                <a class="card-service__link" href="#">Learn More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card-service text-center text-lg-left mb-4 mb-lg-0">
+                                <span class="card-service__icon">
+                                    <i class="flaticon-face"></i>
+                                </span>
+                                <h3 class="card-service__title">Vaccinations</h3>
+                                <p class="card-service__subtitle">Administering essential vaccinations to protect dogs against common and potentially dangerous diseases.</p>
+                                <a class="card-service__link" href="#">Learn More</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================ Service section end =================-->
+        <!--================About  Area =================-->
+        <section id="about-area">
+            <section class="about-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-10 offset-md-1 col-lg-6 offset-lg-6 offset-xl-7 col-xl-5">
+                            <div class="about-content">
+                                <h4>
+                                    Welcome to Wagging Tail<br />
+                                    Where Your Dog's Health is Our Priority!
+                                </h4>
+                                <h6>At wagging tail, we are a passionate and dedicated team of veterinary professionals committed to providing exceptional care for your beloved four-legged companions.</h6>
+                                <p>Our mission is simple - to create a warm, welcoming environment where your dogs feel comfortable, safe, and well-cared for. We believe that every wagging tail deserves the best possible care, which is why we offer a comprehensive range of veterinary services tailored to meet the unique needs of each individual dog.</p>
+
+                                <a class="link_one" href="#">learn more</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!--================About Area End =================-->
+        <!--================ Team section start =================-->
+        <section id="doctors">
+            <section class="team-area area-padding">
+                <div class="container">
+                    <div class="area-heading row">
+                        <div class="col-md-5 col-xl-4">
+                            <h3>
+                                Wagging Tail<br>
+                                Experience Veterenians
+                            </h3>
+                        </div>
+                        <div class="col-md-7 col-xl-8">
+                            <p>At wagging tail, our team of dedicated veterinarians is the heart and soul of our mission to provide top-quality care for your cherished pets. Each veterinarian in our clinic brings a wealth of experience, expertise, and a genuine love for animals, making us a trusted partner in your pet's health journey.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card card-team">
+                                <img class="card-img rounded-0" src="~/Content/Front Template/img/team/1.jpg" alt="">
+                                <div class="card-team__body text-center">
+                                    <h3><a href="#">Arafat Alam</a></h3>
+                                    <p>Canine Cardiologist</p>
+                                    <div class="team-footer d-flex justify-content-between">
+                                        <a class="dn_btn" href=""><i class="ti-mobile"></i>+880 1970307986</a>
+                                        <ul class="card-team__social">
+                                            <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                            <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                                            <li><a href="#"><i class="ti-instagram"></i></a></li>
+                                            <li><a href="#"><i class="ti-skype"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card card-team">
+                                <img class="card-img rounded-0" src="~/Content/Front Template/img/team/2.jpg" alt="">
+                                <div class="card-team__body text-center">
+                                    <h3><a href="#">Dipta Biswas</a></h3>
+                                    <p>Canine Behavior Specialist</p>
+                                    <div class="team-footer d-flex justify-content-between">
+                                        <a class="dn_btn" href=""><i class="ti-mobile"></i>+880 1970307986</a>
+                                        <ul class="card-team__social">
+                                            <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                            <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                                            <li><a href="#"><i class="ti-instagram"></i></a></li>
+                                            <li><a href="#"><i class="ti-skype"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card card-team">
+                                <img class="card-img rounded-0" src="~/Content/Front Template/img/team/3.jpg" alt="">
+                                <div class="card-team__body text-center">
+                                    <h3><a href="#">Bidyarthi Paul</a></h3>
+                                    <p>Canine Orthopedic Surgeon</p>
+                                    <div class="team-footer d-flex justify-content-between">
+                                        <a class="dn_btn" href=""><i class="ti-mobile"></i>+880 1970307986</a>
+                                        <ul class="card-team__social">
+                                            <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                            <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                                            <li><a href="#"><i class="ti-instagram"></i></a></li>
+                                            <li><a href="#"><i class="ti-skype"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!--================ Team section end =================-->
+        <!--================ appointment Area Starts =================-->
+        <section class="appointment-area">
+            <div class="container">
+
+                <div class="appointment-inner">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-8 offset-lg-1 mx-auto">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <h1 style="color: black;">Frequently asked Questions?</h1>
+                            </div>
+                            <div class="accordion" id="accordionExample">
+
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                What are your clinic's working hours and do you accept walk-in appointments?
+                                            </button>
+
+                                        </h5>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Our clinic operates from 9am to 11pm, 6 days. We do encourage pet owners to schedule appointments in advance to ensure minimal wait times and allow us to accommodate each pet's needs effectively. However, we understand that emergencies can happen, and we do accept walk-in appointments, though they may be subject to availability.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                How do I schedule an appointment for my dog?
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Scheduling an appointment is easy! You can call us at 01970307986 during our working hours, and one of our friendly staff members will be happy to assist you in booking a convenient time for your pet's visit. Alternatively, you can also use our online appointment booking system on our website www.waggingtail.com, where you can select the preferred date and time that suits your schedule.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                What payment options do you accept?
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            We accept various payment options for your convenience, including cash, credit cards (Visa, Mastercard, American Express), and debit cards. Additionally, we also accept pet insurance from most major providers. Please feel free to inquire about our accepted payment methods and insurance coverage during your visit or when you schedule your appointment.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="headingFour">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                What services do you offer for emergency cases?
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Our clinic is fully equipped to handle emergency cases promptly and efficiently. If you have a pet emergency during our working hours, please call us immediately at 01970307986. Our experienced team will guide you on the best course of action and prepare for your pet's arrival. For after-hours emergencies, we have partnered with 01970307986, located at aust. They offer 24/7 emergency care, ensuring your pet receives the urgent attention they need.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="headingFive">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                Does your clinic offer grooming services for dogs?
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            At wagging tail, we focus primarily on veterinary medical services. While we don't offer grooming services on-site, we can recommend reputable and trusted local groomers that provide excellent care for your dog's grooming needs.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+        <!--================ appointment Area End =================-->
+        <!-- ================ testimonial section start ================= -->
+        <section class="testimonial">
+            <div class="container">
+                <div class="testi_slider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="testi_item">
+                            <div class="testimonial_image">
+                                <img src="~/Content/Front Template/img/elements/tes1.jpg" alt="">
+                            </div>
+                            <div class="testi_item_content">
+                                <p>
+                                    "A healthy dog is a joyful companion, and as veterinarians, it's our privilege to ensure every wagging tail is met with expert care and boundless compassion"
+                                </p>
+                                <h4>- Dipta Biswas -</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testi_item">
+                            <div class="testimonial_image">
+                                <img src="~/Content/Front Template/img/elements/tes1.jpg" alt="">
+                            </div>
+                            <div class="testi_item_content">
+                                <p>
+                                    "A healthy dog is a joyful companion, and as veterinarians, it's our privilege to ensure every wagging tail is met with expert care and boundless compassion"
+                                </p>
+                                <h4>- Dipta Biswas -</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testi_item">
+                            <div class="testimonial_image">
+                                <img src="~/Content/Front Template/img/elements/tes1.jpg" alt="">
+                            </div>
+                            <div class="testi_item_content">
+                                <p>
+                                    "A healthy dog is a joyful companion, and as veterinarians, it's our privilege to ensure every wagging tail is met with expert care and boundless compassion"
+                                </p>
+                                <h4>- Dipta Biswas -</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================ testimonial section end ================= -->
+        <!-- ================ Hotline Area Starts ================= -->
+        <section id="contact">
+            <section class="hotline-area text-center area-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>Emergency hotline</h2>
+                            <span>01970307986</span>
+                            <p class="pt-3">We provide 24/7 customer support. You can also contact us  through our email<br>for emergency case.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- ================ Hotline Area End ================= -->
+        <!--================ Start Blog Area =================-->
+        <section id="blog">
+            <section class="blog-area area-padding">
+                <div class="container">
+                    <div class="area-heading row">
+                        <div class="col-md-5 col-xl-4">
+                            <h3>
+                                Learn More about<br>
+                                Your Dog's Health
+                            </h3>
+                        </div>
+                        <div class="col-md-7 col-xl-8">
+                            <p>Welcome to our comprehensive dog health blog, where we delve into the world of canine well-being, offering valuable insights, expert advice, and practical solutions to ensure your furry companion enjoys a life filled with vitality, happiness, and wagging tails!</p>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 col-md-4">
+                            <div class="single-blog">
+                                <div class="thumb">
+                                    <img class="img-fluid" src="~/Content/Front Template/img/blog/1d.jpg" alt="">
+                                </div>
+                                <div class="short_details">
+
+                                   
+
+                                    <ul style="list-style-type: none;">
+                                        <li class="nav-item">
+                                            @Html.ActionLink("Unraveling Canine Health: A Guide to Understanding and Addressing Common Dog Health Problems", "Blog", "Home", new { @class = "nav-link", style = "font-size: 22px; font-weight: normal; font-family: 'Your Custom Font', Georgia, serif;" })
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-md-4">
+                            <div class="single-blog">
+                                <div class="thumb">
+                                    <img class="img-fluid" src="~/Content/Front Template/img/blog/2d.jpg" alt="">
+                                </div>
+                                <div class="short_details">
+                                   
+                                    <ul style="list-style-type: none;">
+                                        <li class="nav-item">
+                                            @Html.ActionLink("Health Hounds: Tackling Dog Health Problems Head-On for a Happier, Healthier Pet", "Blog", "Home", new { @class = "nav-link", style = "font-size: 22px; font-weight: normal; font-family: 'Your Custom Font', Georgia, serif;" })
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-md-4">
+                            <div class="single-blog">
+                                <div class="thumb">
+                                    <img class="img-fluid" src="~/Content/Front Template/img/blog/3d.jpg" alt="">
+                                </div>
+                                <div class="short_details">
+                                    
+                                    <ul style="list-style-type: none;">
+                                        <li class="nav-item">
+                                            @Html.ActionLink("Ailments to Avert: Empowering Dog Owners with Solutions to Common Health Problems", "Blog", "Home", new { @class = "nav-link", style = "font-size: 22px; font-weight: normal; font-family: 'Your Custom Font', Georgia, serif;" })
+                                        </li>
+                                    </ul>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!--================ End Blog Area =================-->
+        <!--================ Start Brands Area =================-->
+        <section class="brands-area background_one">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="owl-carousel brand-carousel">
+                            <!-- single-brand -->
+                            <div class="single-brand-item d-table">
+                                <div class="d-table-cell">
+                                    <img src="~/Content/Front Template/img/brand/1.png" alt="">
+                                </div>
+                            </div>
+                            <!-- single-brand -->
+                            <div class="single-brand-item d-table">
+                                <div class="d-table-cell">
+                                    <img src="~/Content/Front Template/img/brand/2.png" alt="">
+                                </div>
+                            </div>
+                            <!-- single-brand -->
+                            <div class="single-brand-item d-table">
+                                <div class="d-table-cell">
+                                    <img src="~/Content/Front Template/img/brand/3.png" alt="">
+                                </div>
+                            </div>
+                            <!-- single-brand -->
+                            <div class="single-brand-item d-table">
+                                <div class="d-table-cell">
+                                    <img src="~/Content/Front Template/img/brand/4.png" alt="">
+                                </div>
+                            </div>
+                            <!-- single-brand -->
+                            <div class="single-brand-item d-table">
+                                <div class="d-table-cell">
+                                    <img src="~/Content/Front Template/img/brand/5.png" alt="">
+                                </div>
+                            </div>
+                            <!-- single-brand -->
+                            <div class="single-brand-item d-table">
+                                <div class="d-table-cell">
+                                    <img src="~/Content/Front Template/img/brand/3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================ End Brands Area =================-->
+        <hr />
+
+    </div>
+
+    <!-- start footer Area -->
+    <footer class="footer-area area-padding-top">
+        <div class="container">
+            <div class="row footer-bottom d-flex justify-content-between">
+                <p class="col-lg-8 col-sm-12 footer-text m-0">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#">Wagging Tail</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+                <div class="col-lg-4 col-sm-12 footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a> 
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer Area -->
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)*@
+
+
+    <script src="~/Content/Front Template/js/jquery-2.2.4.min.js"></script>
+    <script src="~/Content/Front Template/js/popper.js"></script>
+    <script src="~/Content/Front Template/js/bootstrap.min.js"></script>
+    <script src="~/Content/Front Template/js/stellar.js"></script>
+    <script src="~/Content/Front Template/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Content/Front Template/js/jquery.ajaxchimp.min.js"></script>
+    <script src="~/Content/Front Template/js/waypoints.min.js"></script>
+    <script src="~/Content/Front Template/js/mail-script.js"></script>
+    <script src="~/Content/Front Template/js/contact.js"></script>
+    <script src="~/Content/Front Template/js/jquery.form.js"></script>
+    <script src="~/Content/Front Template/js/jquery.validate.min.js"></script>
+    <script src="~/Content/Front Template/js/mail-script.js"></script>
+    <script src="~/Content/Front Template/js/theme.js"></script>
+
+</body>
+</html>

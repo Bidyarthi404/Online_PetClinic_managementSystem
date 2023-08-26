@@ -1,0 +1,125 @@
+﻿@model DatabaseLayer.UserTable
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>O-D-LAB</title>
+
+
+
+    @*<title>@ViewBag.Title</title>*@
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/Front Template/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Content/Front Template/css/themify-icons.css">
+    <link rel="stylesheet" href="~/Content/Front Template/css/flaticon.css">
+    <link rel="stylesheet" href="~/Content/Front Template/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="~/Content/Front Template/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/Front Template/vendors/animate-css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="~/Content/Front Template/css/style.css">
+    <link rel="stylesheet" href="~/Content/Front Template/css/responsive.css">
+</head>
+<body>
+    <div class="container body-content">
+        <section class="appointment-area">
+
+            <div class="container">
+                <div class="appointment-inner accordion">
+                    <div class="row">
+                        <div class="col-md-10">
+
+
+                            
+                                
+
+                           @using (Html.BeginForm())
+                           {
+                               @Html.AntiForgeryToken()
+
+                            <div class="form-horizontal">
+                                <h2 class="text-center">Online Lab System</h2>
+                                <h4 class="text-center">Create Account</h4>
+                                <hr />
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.UserTypeID, "Select Type", htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-4">
+                                        @Html.DropDownList("UserTypeID", null, "Select Type", htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.UserTypeID, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.UserName, "Enter User Name", htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-4">
+                                        @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Password, "Enter Password", htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-4">
+                                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Email, "Email", htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-4">
+                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.ContactNo, "Contact No", htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-4">
+                                        @Html.EditorFor(model => model.ContactNo, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ContactNo, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Create account" class="genric-btn primary" />
+                                        @Html.ActionLink("Back", "Login", "Home", new { @class = "genric-btn default" })
+                                    </div>
+                                </div>
+                            </div>
+                                    }
+                               
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+
+    <script src="~/Content/Front Template/js/jquery-2.2.4.min.js"></script>
+    <script src="~/Content/Front Template/js/popper.js"></script>
+    <script src="~/Content/Front Template/js/bootstrap.min.js"></script>
+    <script src="~/Content/Front Template/js/stellar.js"></script>
+    <script src="~/Content/Front Template/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Content/Front Template/js/jquery.ajaxchimp.min.js"></script>
+    <script src="~/Content/Front Template/js/waypoints.min.js"></script>
+    <script src="~/Content/Front Template/js/mail-script.js"></script>
+    <script src="~/Content/Front Template/js/contact.js"></script>
+    <script src="~/Content/Front Template/js/jquery.form.js"></script>
+    <script src="~/Content/Front Template/js/jquery.validate.min.js"></script>
+    <script src="~/Content/Front Template/js/mail-script.js"></script>
+    <script src="~/Content/Front Template/js/theme.js"></script>
+</body>
+</html>

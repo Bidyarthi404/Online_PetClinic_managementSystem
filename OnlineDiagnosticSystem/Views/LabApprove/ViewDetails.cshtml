@@ -1,0 +1,83 @@
+﻿@model IEnumerable<DatabaseLayer.PatientTestDetailTable>
+
+@{
+    ViewBag.Title = "Report";
+}
+
+<h2>Report Result</h2>
+<div class="card shadow mb-4">
+    <div class="card header py-3">
+        <input type="submit" class="generic-btn success form-control col-md-3" style="float:right;" value="Print Report" />
+        <table>
+            <tr>
+                <td>
+                    Test Title :<h3 class="text-black">@ViewBag.TestName</h3>
+                </td>
+                <td>
+                    Lab Title :<h3 class="text-black">@ViewBag.Lab</h3>
+                </td>
+                <td>
+                    Patient Name :<h3 class="text-black">@ViewBag.Patient</h3>
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    Appointment No :<h3 class="text-black">@ViewBag.AppointmentNo</h3>
+                </td>
+                <td>
+                    <img src="@Url.Content(ViewBag.LabLogo)" height="50" width="50" />
+                </td>
+                <td>
+                    <img src="@Url.Content(ViewBag.PatientPhoto)" height="50" width="50" />
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    <br>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            Details
+                        </th>
+                        <th>
+                            Min Value
+                        </th>
+                        <th>
+                            Max Value
+                        </th>
+                        <th>
+                            Patient Value
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LabTestDetailsTable.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LabTestDetailsTable.MinValue)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LabTestDetailsTable.MaxValue)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PatientValue)
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

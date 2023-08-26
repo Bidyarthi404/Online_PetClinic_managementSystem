@@ -1,0 +1,70 @@
+﻿@model IEnumerable<DatabaseLayer.LabTestDetailsTable>
+
+@{
+    ViewBag.Title = "Test Details";
+}
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<div class="card header py-3">
+    @Html.ActionLink("Add Details", "AddTestDetails", "LabSetting", new { @style = "float:inline-end;", @class = "generic-btn primary" })
+</div>
+<div class="card shadow mb-4">
+    <input type="text" id="search" name="search" class="form-control col-md-3" style="float:right;" placeholder="search here" />
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover" id="dataTable" width="100%" cellspacing="10">
+                <thead>
+                    <tr>
+                        <th>
+                            Test Title
+                        </th>
+                        <th>
+                            Details
+                        </th>
+                        <th>
+                            Min Value
+                        </th>
+                        <th>
+                            Max Value
+                        </th>
+
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="searchvalue">
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LabTestTable.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MinValue)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MaxValue)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "EditTestDetails", new { id = item.LabTestDetailID }, new { @class = "generic-btn primary" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#search").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#searchvalue tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
+</script>

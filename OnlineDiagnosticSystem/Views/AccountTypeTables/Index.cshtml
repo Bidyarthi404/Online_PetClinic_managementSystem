@@ -1,0 +1,58 @@
+﻿@model IEnumerable<DatabaseLayer.AccountTypeTable>
+
+@{
+    ViewBag.Title = "Account Types";
+
+}
+
+<h2>Account Types</h2>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<div class="w3-clear w3-center nextprev">
+    
+        @Html.ActionLink("Add Account Type", "Create", "AccountTypeTables", new { @style = "float:inline-end;", @class = "generic-btn primary" })
+    </div>
+    <br>
+    <div class="w3-clear w3-center nextprev">
+        <input type="text" id="searchtype" name="searchtype" class="form-control col-md-3" style="float:right;" placeholder="search here" />
+        <br>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover" id="dataTable" width="100%" cellspacing="10">
+                    <thead>
+                        <tr>
+                            <th>
+                                Account Type
+                            </th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="searchvalue">
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.AccountTypeID }, new { @class = "generic-btn success" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#searchtype").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#searchvalue tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+
+    </script>

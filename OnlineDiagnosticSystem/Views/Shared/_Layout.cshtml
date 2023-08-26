@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Wagging Tail</title>
+    <meta name="description" content="">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="shortcut icon" href="img/favicon.png"> -->
+    <link href="~/Content/Dashboard Template/css.css" rel="stylesheet" />
+
+    <!-- Syntax Highlighter -->
+    <link rel="stylesheet" type="text/css" href="~/Content/Dashboard Template/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" type="text/css" href="~/Content/Dashboard Template/syntax-highlighter/styles/shThemeDefault.css" media="all">
+    <link href="~/Content/Admin Template/css/sb-admin-2.min.css" rel="stylesheet" />
+    <!--<link href="~/Content/Admin Template/css/style.css" rel="stylesheet" />-->
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="~/Content/Dashboard Template/css/font-awesome.min.css">
+    <!-- Normalize/Reset CSS-->
+    <link rel="stylesheet" href="~/Content/Dashboard Template/css/normalize.min.css">
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="~/Content/Dashboard Template/css/main.css">
+
+    <link rel="stylesheet" href="~/Content/Front Template/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Content/Front Template/css/themify-icons.css">
+    <link rel="stylesheet" href="~/Content/Front Template/css/flaticon.css">
+    <link rel="stylesheet" href="~/Content/Front Template/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="~/Content/Front Template/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/Front Template/vendors/animate-css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="~/Content/Front Template/css/style.css">
+    <link rel="stylesheet" href="~/Content/Front Template/css/responsive.css">
+
+    <style>
+        #topFixedNavbar1 {
+            overflow-y: scroll !important;
+            max-height: 500px !important;
+        }
+    </style>
+</head>
+
+<body id="welcome">
+    <aside class="left-sidebar">
+        <div class="logo">
+            <a href="#welcome">
+
+                <img src="~/Content/Test/cover.png" />
+            </a>
+        </div>
+        <nav class="left-nav" id="topFixedNavbar1">
+            <ul id="nav navbar-nav">
+                
+                <li>@Html.ActionLink("Change Password", "ChangePassword", "Home", null, null)</li>
+                @{
+
+                    if (Session["UserTypeID"] != null)
+                    {
+                        var usertype = Convert.ToString(Session["UserTypeID"]);
+
+                        int value = Convert.ToInt32(usertype.Trim());
+                        if (value == 1)
+                        {
+
+                            <li>@Html.ActionLink("Account Type", "Index", "AccountTypeTables", null, null)</li>
+                            <li>@Html.ActionLink("All User", "Index", "UserTables", null, null)</li>
+                            <li>@Html.ActionLink("Pending(Lab) Request", "PendingLabRequests", "UserTables", null, null)</li>
+                            <li>@Html.ActionLink("Pending(Doctor) Request", "PendingDocRequests", "UserTables", null, null)</li>
+                            <li>@Html.ActionLink("All Doctors", "GetAllDoctors", "UserTables", null, null)</li>
+                            <li>@Html.ActionLink("All Lab's", "GetAlllabs", "UserTables", null, null)</li>
+                            <li>@Html.ActionLink("All Patients", "GetAllPatients", "UserTables", null, null)</li>
+
+                        }
+
+                           else if (value == 3)
+                            {
+                                //lab User Access
+                                <li>@Html.ActionLink("Time Slot", "Index", "LabTimeSlotTables", null, null)</li>
+                                <li>@Html.ActionLink("All Test", "LabAllTest", "LabSetting", null, null)</li>
+                                <li>@Html.ActionLink("Add Test", "AddTest", "LabSetting", null, null)</li>
+                                <li>@Html.ActionLink("Current Appointment", "CurrentAppoint", "LabApprove", null, null)</li>
+                                <li>@Html.ActionLink("Pending Appointment", "PendingAppoint", "LabApprove", null, null)</li>
+                                <li>@Html.ActionLink("Complete Appointment", "CompleteAppointment", "LabApprove", null, null)</li>
+                                <li>@Html.ActionLink("All Appointment", "AllAppoint", "LabApprove", null, null)</li>
+                                
+
+
+                            }
+
+                           else if (value == 2)
+                            {
+                                //Doctor User Access
+                                <li>@Html.ActionLink("Time Slot", "Index", "DoctorTimeSlotTables", null, null)</li>
+                                <li>@Html.ActionLink("Current Appointment", "CurrentAppoint", "DoctorApprove", null, null)</li>
+                                <li>@Html.ActionLink("Pending Appointment", "PendingAppoint", "DoctorApprove", null, null)</li>
+                                <li>@Html.ActionLink("Complete Appointment", "CompleteAppointment", "DoctorApprove", null, null)</li>
+                                <li>@Html.ActionLink("All Appointment", "AllAppoint", "DoctorApprove", null, null)</li>
+                                
+
+
+                            }
+
+                        else if (value == 4)
+                            {
+                                //Patient User Access
+                                 <li>@Html.ActionLink("All Labs", "GetAlllabs", "PatientAppoint", null, null)</li>
+                                 <li>@Html.ActionLink("All Doctors", "GetAllDoctors", "PatientAppoint", null, null)</li>
+                                 <li>@Html.ActionLink("All Test", "AllTest", "LabSetting", null, null)</li>
+
+
+
+                                <li>@Html.ActionLink("Pending(Lab) Appointment", "PendingAppoint", "LabAppointStatus", null, null)</li>
+                                <li>@Html.ActionLink("Current(Lab) Appointment", "CurrentAppoint", "LabAppointStatus", null, null)</li>
+                                <li>@Html.ActionLink("Cancel(Lab) Appointment", "CancelAppoint", "LabAppointStatus", null, null)</li>
+                                <li>@Html.ActionLink("Complete(Lab) Appointment", "CompleteAppoint", "LabAppointStatus", null, null)</li>
+                                <li>@Html.ActionLink("All(Lab) Appointment", "AllAppoint", "LabAppointStatus", null, null)</li>
+                               
+
+                                <li>@Html.ActionLink("All(Doctor) Appointment", "AllAppoint", "DoctorAppointStatus", null, null)</li>
+                                <li>@Html.ActionLink("Pending(Doctor) Appointment", "PendingAppoint", "DoctorAppointStatus", null, null)</li>
+                                <li>@Html.ActionLink("Current(Doctor) Appointment", "CurrentAppoint", "DoctorAppointStatus", null, null)</li>
+                                <li>@Html.ActionLink("Cancel(Doctor) Appointment", "CancelAppoint", "DoctorAppointStatus", null, null)</li>
+                                <li>@Html.ActionLink("Complete(Doctor) Appointment", "CompleteAppoint", "DoctorAppointStatus", null, null)</li>
+                                
+
+
+                            }
+                        }
+                    }
+                <li>@Html.ActionLink("Logout", "LogoutUser", "Home", null, null)</li>
+
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="main-wrapper">
+        <div class="main-content">
+            <section id="welcome">
+                <div class="content-header">
+                    <h1>Wagging Tail</h1>
+                </div>
+   
+                @RenderBody()
+            </section>
+
+            <!-- Essential JavaScript Libraries
+        ==============================================-->
+            <script type="text/javascript" src="~/Content/Dashboard Template/js/jquery-1.11.0.min.js"></script>
+            <script type="text/javascript" src="~/Content/Dashboard Template/js/jquery.nav.js"></script>
+            <script type="text/javascript" src="~/Content/Dashboard Template/syntax-highlighter/scripts/shCore.js"></script>
+            <script type="text/javascript" src="~/Content/Dashboard Template/syntax-highlighter/scripts/shBrushXml.js"></script>
+            <script type="text/javascript" src="~/Content/Dashboard Template/syntax-highlighter/scripts/shBrushCss.js"></script>
+            <script type="text/javascript" src="~/Content/Dashboard Template/syntax-highlighter/scripts/shBrushJScript.js"></script>
+            <script type="text/javascript" src="~/Content/Dashboard Template/syntax-highlighter/scripts/shBrushPhp.js"></script>
+            <script type="text/javascript">
+                SyntaxHighlighter.all()
+            </script>
+            <script type="text/javascript" src="~/Content/Dashboard Template/js/custom.js"></script>
+
+            <!---page level plugins-->
+            <!---page level custom scripts-->
+            <script src="~/Content/Front Template/js/jquery-2.2.4.min.js"></script>
+            <script src="~/Content/Front Template/js/popper.js"></script>
+            <script src="~/Content/Front Template/js/bootstrap.min.js"></script>
+            <script src="~/Content/Front Template/js/stellar.js"></script>
+            <script src="~/Content/Front Template/vendors/owl-carousel/owl.carousel.min.js"></script>
+            <script src="~/Content/Front Template/js/jquery.ajaxchimp.min.js"></script>
+            <script src="~/Content/Front Template/js/waypoints.min.js"></script>
+            <script src="~/Content/Front Template/js/mail-script.js"></script>
+            <script src="~/Content/Front Template/js/contact.js"></script>
+            <script src="~/Content/Front Template/js/jquery.form.js"></script>
+            <script src="~/Content/Front Template/js/jquery.validate.min.js"></script>
+            <script src="~/Content/Front Template/js/mail-script.js"></script>
+            <script src="~/Content/Front Template/js/theme.js"></script>
+        </div></div>
+</body>
+</html>

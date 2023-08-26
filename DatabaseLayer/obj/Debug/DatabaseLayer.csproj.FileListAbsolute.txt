@@ -1,0 +1,12 @@
+F:\Aust - 3.2\CSE-3200 (SD)\WAGGING TAIL\Application\OnlineDiagnosticSystem\DatabaseLayer\bin\Debug\DatabaseLayer.dll.config
+F:\Aust - 3.2\CSE-3200 (SD)\WAGGING TAIL\Application\OnlineDiagnosticSystem\DatabaseLayer\bin\Debug\DatabaseLayer.dll
+F:\Aust - 3.2\CSE-3200 (SD)\WAGGING TAIL\Application\OnlineDiagnosticSystem\DatabaseLayer\bin\Debug\DatabaseLayer.pdb
+F:\Aust - 3.2\CSE-3200 (SD)\WAGGING TAIL\Application\OnlineDiagnosticSystem\DatabaseLayer\bin\Debug\EntityFramework.dll
+F:\Aust - 3.2\CSE-3200 (SD)\WAGGING TAIL\Application\OnlineDiagnosticSystem\DatabaseLayer\bin\Debug\EntityFramework.SqlServer.dll
+F:\Aust - 3.2\CSE-3200 (SD)\WAGGING TAIL\Application\OnlineDiagnosticSystem\DatabaseLayer\bin\Debug\EntityFramework.xml
+F:\Aust - 3.2\CSE-3200 (SD)\WAGGING TAIL\Application\OnlineDiagnosticSystem\DatabaseLayer\bin\Debug\EntityFramework.SqlServer.xml
+F:\Aust - 3.2\CSE-3200 (SD)\WAGGING TAIL\Application\OnlineDiagnosticSystem\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.CoreCompileInputs.cache
+F:\Aust - 3.2\CSE-3200 (SD)\WAGGING TAIL\Application\OnlineDiagnosticSystem\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.CopyComplete
+F:\Aust - 3.2\CSE-3200 (SD)\WAGGING TAIL\Application\OnlineDiagnosticSystem\DatabaseLayer\obj\Debug\DatabaseLayer.dll
+F:\Aust - 3.2\CSE-3200 (SD)\WAGGING TAIL\Application\OnlineDiagnosticSystem\DatabaseLayer\obj\Debug\DatabaseLayer.pdb
+F:\Aust - 3.2\CSE-3200 (SD)\WAGGING TAIL\Application\OnlineDiagnosticSystem\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.AssemblyReference.cache

@@ -1,0 +1,48 @@
+﻿@model DatabaseLayer.DoctorAppointTable
+
+@{
+    ViewBag.Title = "ChangeStatus";
+}
+
+<h2>Change Appointment Status</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.DoctorAppointID)
+    @Html.HiddenFor(model => model.DoctorID)
+    @Html.HiddenFor(model => model.PatientID)
+    @Html.HiddenFor(model => model.TransectionNo)
+    @Html.HiddenFor(model => model.IsFeeSubmit)
+    @Html.HiddenFor(model => model.DoctorTimeSlotID)
+    @Html.HiddenFor(model => model.AppointDate)
+    @Html.HiddenFor(model => model.Description)
+    <div class="form-group">
+        @Html.LabelFor(model => model.DoctorComment, "Doctor Comments", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DoctorComment, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.DoctorComment, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.IsChecked, "Patient Checking Status", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="checkbox">
+                @Html.EditorFor(model => model.IsChecked)
+                @Html.ValidationMessageFor(model => model.IsChecked, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Process" class="genric-btn success" />
+            @Html.ActionLink("Back to List", "CurrentAppoint")
+        </div>
+    </div>
+</div>
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ef180d0306244df684ea4b34dd5e131a" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.AccountTypeTable" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.DoctorAppointTable" Width="1.5" PointX="10.5" PointY="12.375" />
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.DoctorTable" Width="1.5" PointX="6" PointY="10.125" />
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.DoctorTimeSlotTable" Width="1.5" PointX="8.25" PointY="15.625" />
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.GenderTable" Width="1.5" PointX="3.75" PointY="3.75" />
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.LabAppointTable" Width="1.5" PointX="8.5" PointY="7.25" />
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.LabTable" Width="1.5" PointX="3" PointY="10.5" />
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.LabTestDetailsTable" Width="1.5" PointX="10.5" PointY="16.625" />
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.LabTestTable" Width="1.5" PointX="5.25" PointY="21.25" />
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.LabTimeSlotTable" Width="1.5" PointX="5.25" PointY="6.75" />
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.PatientTable" Width="1.5" PointX="8.25" PointY="19.5" />
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.PatientTestDetailTable" Width="1.5" PointX="12.75" PointY="12.25" />
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.UserTable" Width="1.5" PointX="3.75" PointY="15.625" />
+        <EntityTypeShape EntityType="OnlineDiagnosticLabSystemDbModel.UserTypeTable" Width="1.5" PointX="1.5" PointY="16.5" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_DoctorTable_AccountTypeTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_LabTable_AccountTypeTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_DoctorAppointTable_DoctorTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_DoctorAppointTable_DoctorTimeSlotTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_DoctorAppointTable_PatientTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_DoctorTable_GenderTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_DoctorTable_UserTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_DoctorTimeSlotTable_DoctorTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_PatientTable_GenderTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_LabAppointTable_LabTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_LabAppointTable_LabTestTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_LabAppointTable_LabTimeSlotTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_LabAppointTable_PatientTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_PatientTestDetailTable_LabAppointTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_LabTable_UserTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_LabTestDetailsTable_LabTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_LabTestTable_LabTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_LabTimeSlotTable_LabTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_LabTestDetailsTable_LabTestTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_PatientTestDetailTable_LabTestDetailsTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_PatientTable_UserTable" />
+        <AssociationConnector Association="OnlineDiagnosticLabSystemDbModel.FK_UserTable_UserTypeTable" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
